@@ -1,8 +1,11 @@
 h1 {
-  padding-top: 200px ;
+  padding-top: 150px ;
+  margin-bottom: 50px;
   padding-right: 120px;
   text-align: center;
   flex-wrap: wrap;
+  animation: blinker 6s linear infinite;
+  
 }
 
 .grid {
@@ -16,31 +19,21 @@ h1 {
 }
 
 td{
-  animation-name: beat;
-  animation-iteration-count: infinite;
-  animation-duration: 30s;
+  animation: blinker 3s linear infinite;
 }
 
-@keyframes beat {
-  0%{
-    transform: scale(0.1);
+@keyframes blinker {
+  50% {
     opacity: 0;
   }
-
-  60%{
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100%{
-    transform: scale(1);
-  }
 }
+
 
 .square {
   
-  justify-content: center;
+
   font-size: 80px;
-  text-align: center;
+
   height: 200px;
   width: 200px;
   border: none;
@@ -53,4 +46,17 @@ td{
 
 div {
   font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  border: none;
+  flex-wrap: wrap;
+  background-color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+button:hover{
+  cursor: pointer;
 }
